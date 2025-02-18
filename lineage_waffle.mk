@@ -25,6 +25,7 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 PRODUCT_NO_CAMERA := false
 TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := false
 TARGET_DEFAULT_PIXEL_LAUNCHER := true
+TARGET_INCLUDE_GOOGLE_DIALER := true
 
 # extra add-ons for core GMS builds
 # List of add-ons
@@ -62,11 +63,11 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 # Lunch banner maintainer variable
-RISING_MAINTAINER="hurtcopain"
-RISING_PACKAGE_TYPE := "WITH_GMS"
+RISING_MAINTAINER= Bidyadhar
+RISING_PACKAGE_TYPE := WITH_GMS
 
 # Chipset/Maintainer properties (ro.rising.chipset/ro.rising.maintainer) 
 # (Optional if builder is setting properties via init_<device>.cpp)
 PRODUCT_BUILD_PROP_OVERRIDES += \
     RisingChipset="Qualcomm Snapdragon 8 Gen 3" \
-    RisingMaintainer="unofficial-hurtcopain"
+    RisingMaintainer="unofficial-Bidyahar"
