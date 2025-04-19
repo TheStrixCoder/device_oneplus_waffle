@@ -17,6 +17,8 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 TARGET_HAS_UDFPS := true
 TARGET_ENABLE_BLUR := true
 WITH_GMS := true
+$(call inherit-product-if-exists, vendor/google/gms/config.mk)
+$(call inherit-product-if-exists, vendor/google/pixel/config.mk)
 TARGET_CORE_GMS := true
 TARGET_CORE_GMS_EXTRAS := true
 TARGET_GMS_EXTRAS := true
@@ -29,14 +31,14 @@ TARGET_INCLUDE_GOOGLE_DIALER := true
 
 # extra add-ons for core GMS builds
 # List of add-ons
-PRODUCT_PACKAGES += \
-    Photos \
-    MarkupGoogle \
-    LatinIMEGooglePrebuilt \
-    PrebuiltDeskClockGoogle \
-    CalculatorGooglePrebuilt \
-    CalendarGooglePrebuilt \
-    Velvet
+# PRODUCT_PACKAGES += \
+#     Photos \
+#     MarkupGoogle \
+#     LatinIMEGooglePrebuilt \
+#     PrebuiltDeskClockGoogle \
+#     CalculatorGooglePrebuilt \
+#     CalendarGooglePrebuilt \
+#     Velvet
 
 PRODUCT_NAME := lineage_waffle
 PRODUCT_DEVICE := waffle
@@ -49,9 +51,9 @@ PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 PRODUCT_CHARACTERISTICS := nosdcard
 
 # Boot animation
-scr_resolution := 1440
-TARGET_SCREEN_HEIGHT := 3120
-TARGET_SCREEN_WIDTH := 1440
+# scr_resolution := 1440
+TARGET_SCREEN_HEIGHT := 2376
+TARGET_SCREEN_WIDTH := 1080
 
 # Build info
 PRODUCT_BUILD_PROP_OVERRIDES += \
@@ -63,11 +65,11 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 
 # Lunch banner maintainer variable
-RISING_MAINTAINER= Bidyadhar
-RISING_PACKAGE_TYPE := WITH_GMS
+# RISING_MAINTAINER= Bidyadhar
+# RISING_PACKAGE_TYPE := WITH_GMS
 
 # Chipset/Maintainer properties (ro.rising.chipset/ro.rising.maintainer) 
 # (Optional if builder is setting properties via init_<device>.cpp)
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    RisingChipset="Qualcomm Snapdragon 8 Gen 3" \
-    RisingMaintainer="unofficial-Bidyahar"
+# PRODUCT_BUILD_PROP_OVERRIDES += \
+#     RisingChipset="Qualcomm Snapdragon 8 Gen 3" \
+#     RisingMaintainer="unofficial-Bidyahar"
