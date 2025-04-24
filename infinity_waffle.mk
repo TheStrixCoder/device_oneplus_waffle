@@ -11,14 +11,12 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from waffle device
 $(call inherit-product, device/oneplus/waffle/device.mk)
 
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
 # Addons
 TARGET_HAS_UDFPS := true
 TARGET_ENABLE_BLUR := true
 WITH_GMS := true
-$(call inherit-product-if-exists, vendor/google/gms/config.mk)
-$(call inherit-product-if-exists, vendor/google/pixel/config.mk)
 TARGET_CORE_GMS := true
 TARGET_CORE_GMS_EXTRAS := true
 TARGET_GMS_EXTRAS := true
@@ -73,3 +71,25 @@ PRODUCT_GMS_CLIENTID_BASE := android-oneplus
 # PRODUCT_BUILD_PROP_OVERRIDES += \
 #     RisingChipset="Qualcomm Snapdragon 8 Gen 3" \
 #     RisingMaintainer="unofficial-Bidyahar"
+
+
+# Whether you are compiling being an OFFICIAL Maintainer:
+INFINITY_BUILD_TYPE := UNOFFICIAL
+
+# Maintainer Name
+INFINITY_MAINTAINER := "BiD"
+
+# Whether the package includes System BLURS
+TARGET_SUPPORTS_BLUR := true
+
+# Whether the compiled package ships Google Apps:
+WITH_GAPPS := true
+
+# Whether the compiled package ships more (mostly unimportant) Google Apps:
+# TARGET_SHIPS_FULL_GAPPS := true/false (Default: false) (These apps could easily be installed via PlayStore as per user need, so could be skipped shipping by default)
+
+# Whether the compiled shipped gapps package uses Google Dialer:
+TARGET_SHIPS_GOOGLE_DIALER := false
+
+# Whether the compiled package ships Motorola Calculator:
+USE_MOTO_CALCULATOR := true

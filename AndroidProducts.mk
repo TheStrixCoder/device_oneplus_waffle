@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_waffle.mk
+    $(LOCAL_DIR)/infinity_waffle.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_waffle-user \
-    lineage_waffle-userdebug \
-    lineage_waffle-eng
+    infinity_waffle-user \
+    infinity_waffle-userdebug \
+    infinity_waffle-eng
